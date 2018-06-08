@@ -13,6 +13,8 @@
 		38EE941320CA2648001A2BCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38EE941220CA2648001A2BCB /* Assets.xcassets */; };
 		38EE941620CA2648001A2BCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38EE941420CA2648001A2BCB /* LaunchScreen.storyboard */; };
 		38EE941920CA2648001A2BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EE941820CA2648001A2BCB /* main.m */; };
+		38EE942120CA2721001A2BCB /* DynamicTitleInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EE942020CA2721001A2BCB /* DynamicTitleInputView.m */; };
+		38EE942320CA2733001A2BCB /* DynamicTitleInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38EE942220CA2733001A2BCB /* DynamicTitleInputView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		38EE941520CA2648001A2BCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38EE941720CA2648001A2BCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38EE941820CA2648001A2BCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38EE941F20CA2721001A2BCB /* DynamicTitleInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicTitleInputView.h; sourceTree = "<group>"; };
+		38EE942020CA2721001A2BCB /* DynamicTitleInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicTitleInputView.m; sourceTree = "<group>"; };
+		38EE942220CA2733001A2BCB /* DynamicTitleInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicTitleInputView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,9 @@
 				38EE940C20CA2646001A2BCB /* ViewController.h */,
 				38EE940D20CA2646001A2BCB /* ViewController.m */,
 				38EE940F20CA2646001A2BCB /* Main.storyboard */,
+				38EE941F20CA2721001A2BCB /* DynamicTitleInputView.h */,
+				38EE942020CA2721001A2BCB /* DynamicTitleInputView.m */,
+				38EE942220CA2733001A2BCB /* DynamicTitleInputView.xib */,
 				38EE941220CA2648001A2BCB /* Assets.xcassets */,
 				38EE941420CA2648001A2BCB /* LaunchScreen.storyboard */,
 				38EE941720CA2648001A2BCB /* Info.plist */,
@@ -128,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38EE942320CA2733001A2BCB /* DynamicTitleInputView.xib in Resources */,
 				38EE941620CA2648001A2BCB /* LaunchScreen.storyboard in Resources */,
 				38EE941320CA2648001A2BCB /* Assets.xcassets in Resources */,
 				38EE941120CA2646001A2BCB /* Main.storyboard in Resources */,
@@ -141,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38EE942120CA2721001A2BCB /* DynamicTitleInputView.m in Sources */,
 				38EE940E20CA2646001A2BCB /* ViewController.m in Sources */,
 				38EE941920CA2648001A2BCB /* main.m in Sources */,
 				38EE940B20CA2646001A2BCB /* AppDelegate.m in Sources */,

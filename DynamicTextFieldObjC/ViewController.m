@@ -7,23 +7,44 @@
 //
 
 #import "ViewController.h"
+#import "DynamicTitleInputView.h"
 
-@interface ViewController ()
+@interface ViewController () <DynamicTitileInputViewDelegate>
 
 @end
 
 @implementation ViewController
+{
+    DynamicTitleInputView *dynamicView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    dynamicView = [[DynamicTitleInputView alloc] initWithTitle:@"second" color:UIColor.grayColor];
+    dynamicView.delegate = self;
+    dynamicView.frame = _dynamicAreaView.frame;
+    [self.view addSubview:dynamicView];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    dynamicView.frame = _dynamicAreaView.frame;
 }
 
+#pragma - Dynamic Title Input View Delegate
+- (void)dynamicDidBeginEditing:(NSString *)text {
+    NSLog(@"開始編輯: %@", text);
+}
 
+- (void)dynamicDidEndEditing:(NSString *)text {
+    NSLog(@"結束編輯: %@", text);
+}
+
+#pragma - Gesture Action
+
+- (IBAction)viewTapped:(UITapGestureRecognizer *)sender {
+    [self.view endEditing:YES];
+}
 @end

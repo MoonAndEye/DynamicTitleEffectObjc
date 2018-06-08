@@ -1,18 +1,66 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DynamicTitleInputView">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="XsG-yJ-8IV"/>
+                <outlet property="inputTextField" destination="hdY-1X-RvS" id="NoJ-fD-5mJ"/>
+                <outlet property="titleLabel" destination="vml-jv-WNO" id="AT2-zY-v1Y"/>
+                <outlet property="underlineView" destination="017-id-elK" id="c5d-D9-gnW"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="250" height="57"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="017-id-elK">
+                    <rect key="frame" x="15" y="51" width="220" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="CQi-AE-taj"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vml-jv-WNO">
+                    <rect key="frame" x="15" y="20" width="220" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdY-1X-RvS">
+                    <rect key="frame" x="15" y="15" width="220" height="27"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="7Mf-8U-pry"/>
+                    </connections>
+                </textField>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hdY-1X-RvS" firstAttribute="leading" secondItem="017-id-elK" secondAttribute="leading" id="Ahb-9A-IWS"/>
+                <constraint firstItem="hdY-1X-RvS" firstAttribute="bottom" secondItem="017-id-elK" secondAttribute="bottom" constant="-10" id="E2N-vh-ecf"/>
+                <constraint firstItem="vml-jv-WNO" firstAttribute="trailing" secondItem="017-id-elK" secondAttribute="trailing" id="LJw-dv-MXF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="017-id-elK" secondAttribute="bottom" constant="5" id="S5L-7O-Oua"/>
+                <constraint firstItem="017-id-elK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Ue4-G2-f9o"/>
+                <constraint firstItem="vml-jv-WNO" firstAttribute="leading" secondItem="017-id-elK" secondAttribute="leading" id="Yah-6S-XQr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="017-id-elK" secondAttribute="trailing" constant="15" id="doO-8o-Iei"/>
+                <constraint firstItem="017-id-elK" firstAttribute="top" secondItem="vml-jv-WNO" secondAttribute="bottom" constant="10" id="uOB-gc-flj"/>
+                <constraint firstItem="hdY-1X-RvS" firstAttribute="trailing" secondItem="017-id-elK" secondAttribute="trailing" id="vYk-M0-hcj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34" y="53.5"/>
         </view>
     </objects>
 </document>
